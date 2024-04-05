@@ -9,6 +9,7 @@ services:
       - weewx-db:/home/weewx-data/archive
       - weewx-html:/home/weewx-data/public_html
     restart: unless-stopped
+    privileged: true
   weewx-web:
     image: nginx:latest
     ports:
